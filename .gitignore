@@ -1,0 +1,21 @@
+# Eclipse files
+.project
+.classpath
+.settings/
+bin/
+
+# Maven/Gradle build output
+target/
+build/
+
+# Selenium dependencies
+*.log
+chromedriver.exe
+geckodriver.exe
+
+# IDE-specific
+.idea/
+*.iml
+
+# Sensitive files
+*.properties
