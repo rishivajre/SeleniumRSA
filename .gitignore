@@ -8,14 +8,27 @@ bin/
 target/
 build/
 
-# Selenium dependencies
+# TestNG and Cucumber outputs
+test-output/
+reports/
+
+# Selenium dependencies and logs
 *.log
 chromedriver.exe
 geckodriver.exe
+*.exe
 
 # IDE-specific
 .idea/
 *.iml
+*.ipr
+*.iws
+
+# OS specific
+.DS_Store
+Thumbs.db
 
 # Sensitive files
 *.properties
+secrets/
+config/local.*

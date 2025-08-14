@@ -58,7 +58,7 @@ public class SubmitOrderTest extends BaseTest { // inheritance
 	public void OrderHistoryTest() 
 	{
 		//Zara Coat 3
-		ProductCatalog productCatalog = landingPage.loginApplication("virenshukla@gmail.com", "Viren@123");
+		ProductCatalog productCatalog = landingPage.loginApplication("testuser1@example.com", "TestPass@123");
 		OrderPage orderPage = productCatalog.goToOrdersPage();
 		Assert.assertTrue(orderPage.VerifyOrderDisplay(productName));
 	}
@@ -69,7 +69,7 @@ public class SubmitOrderTest extends BaseTest { // inheritance
 	@DataProvider
 	public Object[][] getData() throws IOException
 	{
-		List <HashMap<String, String>> data = getJsonDataToMap("C:\\Users\\LENOVO\\eclipse-workspace\\SeleniumFrameworkDesign\\src\\test\\java\\rahulshettyacademy\\data\\PurchaseOrder.json");
+		List <HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"/src/test/java/rahulshettyacademy/data/PurchaseOrder.json");
 		return new Object[][] { {data.get(0)}, {data.get(1)} };
 	}	
 	
