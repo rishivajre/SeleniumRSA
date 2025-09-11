@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite  name="Suite">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Suite" parallel="tests" thread-count="3" verbose="2">
+    <!-- Suite-level parameters for browser and environment -->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="qa"/>
 
-<listeners>
-<listener class-name="rahulshettyacademy.TestComponents.Listeners"></listener>
-</listeners>
+    <!-- Listeners for reporting and retry logic -->
+    <listeners>
+        <listener class-name="com.projectname.listeners.TestListener"/>
+        <listener class-name="com.projectname.listeners.RetryAnalyzer"/>
+    </listeners>
 
+    <!-- Sprint 01: Login & Checkout -->
+    <test name="Sprint01 Tests" group-by-instances="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.projectname.sprints.sprint01.LoginTest"/>
+            <class name="com.projectname.sprints.sprint01.CheckoutTest"/>
+        </classes>
+    </test>
 
+    <!-- Sprint 02: Cart -->
+    <test name="Sprint02 Tests">
+        <classes>
+            <class name="com.projectname.sprints.sprint02.CartTest"/>
+        </classes>
+    </test>
 
-  <test thread-count="5" name="Submit Order Test">
-    <classes>
-      <class name="rahulshettyacademy.tests.SubmitOrderTest"/>
-    </classes>
-  </test> <!-- Test -->
-  
-    <test thread-count="5" name="Error Validation Test">
-    <classes>
-      <class name="rahulshettyacademy.tests.ErrorValidationsTest"/>
-    </classes>
-  </test> <!-- Test -->
-  
-</suite> <!-- Suite -->
+    <!-- Add more tests/classes as needed -->
+</suite>

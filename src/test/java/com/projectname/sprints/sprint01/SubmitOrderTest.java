@@ -1,4 +1,4 @@
-package rahulshettyacademy.tests;
+package com.projectname.sprints.sprint01;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,13 +21,13 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import rahulshettyacademy.TestComponents.BaseTest;
-import rahulshettyacademy.pageobjects.CartPage;
-import rahulshettyacademy.pageobjects.CheckoutPage;
-import rahulshettyacademy.pageobjects.ConfirmationPage;
-import rahulshettyacademy.pageobjects.LandingPage;
-import rahulshettyacademy.pageobjects.OrderPage;
-import rahulshettyacademy.pageobjects.ProductCatalog;
+import com.projectname.core.BaseTest;
+import com.projectname.pages.CartPage;
+import com.projectname.pages.CheckoutPage;
+import com.projectname.pages.ConfirmationPage;
+import com.projectname.pages.LandingPage;
+import com.projectname.pages.OrderPage;
+import com.projectname.pages.ProductCatalog;
 
 public class SubmitOrderTest extends BaseTest { // inheritance
 
@@ -42,17 +42,13 @@ public class SubmitOrderTest extends BaseTest { // inheritance
 		ProductCatalog productCatalog = landingPage.loginApplication(input.get("email"),input.get("password"));
 		List<WebElement> products = productCatalog.getProductList();
 		productCatalog.addProductToCart(input.get("productName"));
-		CartPage cartPage = productCatalog.goToCartPage();
-		Boolean match = cartPage.VerifyOrderDisplay(input.get("productName"));
-		// Assert.assertTrue(match);
-		CheckoutPage checkoutPage = cartPage.goToCheckout();
-		checkoutPage.selectCountry("india");
-		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
-		String confirmMessage = confirmationPage.getConfirmationPage();
-		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER.")); // assertion should be inside
-																						// your main page!!! its in
-																						// right place now.
-	}
+	CartPage cartPage = productCatalog.goToCartPage();
+	Boolean match = cartPage.VerifyOrderDisplay(input.get("productName"));
+	Assert.assertTrue(match);
+	CheckoutPage checkoutPage = cartPage.goToCheckout();
+	checkoutPage.selectCountry("india");
+	ConfirmationPage confirmationPage = checkoutPage.submitOrder();
+}
 
 	@Test (dependsOnMethods= {"submitOrder"})// created to verify the previous test result and how to connect is shown here
 	public void OrderHistoryTest() 

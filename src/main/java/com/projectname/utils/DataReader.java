@@ -1,4 +1,4 @@
-package rahulshettyacademy.data;
+package com.projectname.utils;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,19 +1,17 @@
-package rahulshettyacademy.TestComponents;
+package com.projectname.listeners;
 
 import java.io.IOException;
-
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.projectname.config.resources.ExtentReporterNG;
+import org.openqa.selenium.WebDriver;
+import com.projectname.core.BaseTest;
 
-import rahulshettyacademy.resources.ExtentReporterNG;
-
-public class Listeners extends BaseTest implements ITestListener {
+public class TestListener extends BaseTest implements ITestListener {
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReporterObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();		//Thread Safe

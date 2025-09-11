@@ -1,4 +1,4 @@
-package rahulshettyacademy.stepDefinition;
+package com.projectname.stepdefs;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,12 +10,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import rahulshettyacademy.TestComponents.BaseTest;
-import rahulshettyacademy.pageobjects.CartPage;
-import rahulshettyacademy.pageobjects.CheckoutPage;
-import rahulshettyacademy.pageobjects.ConfirmationPage;
-import rahulshettyacademy.pageobjects.LandingPage;
-import rahulshettyacademy.pageobjects.ProductCatalog;
+import com.projectname.core.BaseTest;
+import com.projectname.pages.CartPage;
+import com.projectname.pages.CheckoutPage;
+import com.projectname.pages.ConfirmationPage;
+import com.projectname.pages.LandingPage;
+import com.projectname.pages.ProductCatalog;
 
 public class stepDefinitionImplementation extends BaseTest {
 	public ConfirmationPage confirmationPage;

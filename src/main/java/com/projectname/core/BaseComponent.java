@@ -1,4 +1,4 @@
-package rahulshettyacademy.AbstractComponents;
+package com.projectname.core;
 
 import java.time.Duration;
 
@@ -10,14 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import rahulshettyacademy.pageobjects.CartPage;
-import rahulshettyacademy.pageobjects.OrderPage;
+import com.projectname.pages.CartPage;
+import com.projectname.pages.OrderPage;
 
-public class AbstractComponent {
+public class BaseComponent {
 	
 	static WebDriver driver;
-	public AbstractComponent(WebDriver driver) {
-		AbstractComponent.driver=driver;
+	public BaseComponent(WebDriver driver) {
+		BaseComponent.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 

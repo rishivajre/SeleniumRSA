@@ -1,4 +1,4 @@
-package rahulshettyacademy.tests;
+package com.projectname.sprints.sprint02;
 
 import java.time.Duration;
 import java.util.List;

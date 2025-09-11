@@ -1,4 +1,4 @@
-package rahulshettyacademy.pageobjects;
+package com.projectname.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import rahulshettyacademy.AbstractComponents.AbstractComponent;
+import com.projectname.core.BaseComponent;
 
-public class LandingPage extends AbstractComponent{
+public class LandingPage extends BaseComponent{
 	
 	WebDriver driver;	//current class driver
 	
