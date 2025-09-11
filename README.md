@@ -429,9 +429,7 @@ Organized by development sprints for better tracking.
 ## 📞 Support
 
 For questions and support:
-- **Email**: support@projectname.com
-- **Documentation**: [Project Wiki](link-to-wiki)
-- **Issues**: [GitHub Issues](link-to-issues)
+- **LinkedIn**: [support@projectname.com](https://www.linkedin.com/in/rishikesh-vajre/)
 
 ---
 
